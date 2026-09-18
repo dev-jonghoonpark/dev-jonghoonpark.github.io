@@ -16,11 +16,18 @@
 
 | 경로 | 서빙 주소 | 비고 |
 |---|---|---|
-| `public/robots.txt` | `/robots.txt` | 크롤링 규칙 · 사이트맵 선언 |
-| `public/index.html` | `/` | 루트 랜딩 페이지 |
-| `public/.nojekyll` | — | Jekyll 처리 끄기 |
+| `robots.txt` | `/robots.txt` | 크롤링 규칙 · 사이트맵 선언 |
+| `index.html` | `/` | 루트 랜딩 페이지 |
+| `.nojekyll` | — | Jekyll 처리 끄기 |
 
-`public/` 만 Actions 로 배포된다. 저장소 루트의 README·워크플로는 올라가지 않는다.
+파일을 저장소 루트에 두는 이유: Pages 소스가 **GitHub Actions** 든
+**Deploy from a branch (main / root)** 든 똑같이 동작하게 하려는 것이다.
+`.github/workflows/deploy.yml` 이 Actions 배포를 담당하고,
+`upload-pages-artifact` 는 `.git` 과 `.github` 을 알아서 제외한다.
+
+사이트맵을 `sitemap.xml` 로 착각하기 쉬운데, 이 저장소에는 사이트맵이 없다.
+루트 페이지 한 장뿐이라 필요 없고, 각 프로젝트의 사이트맵은
+`robots.txt` 의 `Sitemap:` 줄로 선언한다.
 
 ## 사이트맵 추가하기
 

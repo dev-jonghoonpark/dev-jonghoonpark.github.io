@@ -29,9 +29,11 @@ jobs:
         with:
           enablement: true
 
+      # 저장소 루트를 그대로 올린다. 이 액션은 .git 과 .github 을 알아서 제외한다.
+      # (Pages 소스가 "Deploy from a branch" 여도 같은 결과가 나오도록 루트에 둔다)
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: .
 
       - id: deployment
         uses: actions/deploy-pages@v4
