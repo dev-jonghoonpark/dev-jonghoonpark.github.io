@@ -41,5 +41,5 @@ Sitemap: https://dev-jonghoonpark.github.io/<저장소이름>/sitemap.xml
 
 ## 랜딩 페이지 목록
 
-`public/index.html` 의 링크는 저장소 `homepage` 필드에 `github.io` 주소가
-설정돼 있던 것만 넣어 뒀다. 나머지 Pages 프로젝트도 노출하고 싶으면 직접 추가할 것.
+`index.html` 의 링크는 직접 골라서 넣는다. Pages 가 켜진 저장소가 15개지만
+전부 노출할 이유는 없다.
