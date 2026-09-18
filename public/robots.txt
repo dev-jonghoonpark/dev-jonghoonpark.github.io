@@ -1,0 +1,36 @@
+# dev-jonghoonpark.github.io — 호스트 루트 robots.txt
+#
+# 크롤러는 호스트 루트의 이 파일 하나만 읽는다.
+# 프로젝트 사이트 안에 둔 /crossfit-guide/robots.txt 같은 건 무시되므로
+# 크롤링 규칙과 사이트맵 선언은 전부 여기서 관리한다.
+
+User-agent: *
+Allow: /
+
+# AI 검색 크롤러 — 인용 노출을 위해 명시적으로 허용
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# 사이트맵 — 사이트맵을 가진 프로젝트가 늘어나면 한 줄씩 추가한다.
+Sitemap: https://dev-jonghoonpark.github.io/crossfit-guide/sitemap.xml
